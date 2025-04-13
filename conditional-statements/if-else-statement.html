@@ -1,0 +1,21 @@
+<html>
+<header>
+    <title>if-else-statement</title>
+</header>
+
+<body>
+    <script>
+        var currBal = 10000;
+        var transAmount = prompt("Enter amount to transfer");
+        if (transAmount < currBal) {
+            alert("balance before debit:" + currBal);
+            document.write("balance before debit:" + currBal);
+            document.write("<br>")
+            currBal -= transAmount;
+            alert("balance after debit:" + currBal);
+            document.write("balance after debit:" + currBal);
+        } else {
+            alert("please enter amount leass than account balance")
+        }
+    </script>
+</body>

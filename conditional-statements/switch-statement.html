@@ -1,0 +1,28 @@
+<html>
+<header>
+    <title>if-else-if-else-statement</title>
+</header>
+
+<body>
+    <script>
+        var a = prompt("Enter the a value");
+        var b = prompt("Enter the b value");
+        var option = prompt("choose any one option (+/-/*//)");
+        switch (option) {
+            case '+':
+                alert("adding of a and b is: " + (a + b));
+                break;
+            case '-':
+                alert("subracting of a and b is: " + (a - b));
+                break;
+            case '*':
+                alert("product of a and b is: " + (a * b));
+                break;
+            case '/':
+                alert("division of a and b is: " + parseFloat((a / b)).toFixed(2));
+                break;
+            default:
+                alert("choose correction option");
+        }
+    </script>
+</body>
