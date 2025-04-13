@@ -1,0 +1,57 @@
+<html>
+<header>
+    <title>java script variables</title>
+</header>
+
+<body>
+    <script>
+        //var
+        var name = "sudeesh";
+        var name = "kumar"; // re-declaration allowed
+        name = "raj"; // re-assignment allowed
+        console.log(name); //output:raj
+        var name; // declaration and initialization happens different time
+        name = "sudheesh";
+
+        //let
+        let age = 23;
+        //let age = 30; // cannot re-declare thorws error 
+        age = 24; //re-assigment allowed
+        console.log(age)// output:24
+        let l1; // declaration and initialization happens different time
+        l1 = 20;
+        console.log(l1)
+
+        //const 
+        const pi = 3.14;
+        //const pi = 3.14; // re-declaration not allowed
+        //pi = 3.14159; // re-assigment not allowed
+        console.log(pi);
+        //const c1; // declaration and initialization happens different time
+        //c1 = 100;
+
+
+        //block scope
+        {
+            var a = 10;
+            let b = 20;
+            const c = 30;
+        }
+        console.log(a);//var is a function level scoped variable means we can access outside block and within function
+        //console.log(b); // let is block level scope can access within the block only
+        //console.log(c); // const is block level scope can access within the block only
+
+        //hoisting
+        console.log(v1); //undefined because for var the declarions goes top if we call before initualiza the declarion goes to top and execute from there
+        var v1 = 10;
+
+        console.log(l2); // reference error even its hoisted we cannot access it because it goes to TDZ(temporal dead zone)
+        let l2 = 20;
+
+        console.log(c2); // reference error even its hoisted we cannot access it because it goes to TDZ(temporal dead zone)
+        const c2 = 30;
+
+    </script>
+</body>
+
+</html>
