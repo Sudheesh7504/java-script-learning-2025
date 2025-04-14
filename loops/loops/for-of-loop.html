@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <ttitle>for..of.loop</ttitle>
+</head>
+
+<body>
+    <h1>for..of loop is iterable loop can access values directly of the array/string</h1>
+    <script>
+        //arrays
+        let arr = [1, 2, 4, 5];
+        for (let i of arr) {
+            document.write(i + " " + "<br>");
+        }
+        document.write("<br>")
+        //strings
+        let str1 = "sudeesh";
+        for (let i of str1) {
+            document.write(i + " " + "<br>");
+        }
+        document.write("<br>")
+        // //objects(keys,values,entries)
+        //Object.Keys
+        let obj1 = { "id": "1", "name": "sudeesh", "age": "23" };
+        for (let key of Object.keys(obj1)) {
+            document.write(key + ":" + obj1[key] + "<br>");
+        }
+
+        document.write("<br>")
+
+        //Object.Values
+        for (let value of Object.values(obj1)) {
+            document.write(value + "<br>");
+        }
+
+        document.write("<br>")
+
+        //Object.Entries
+        for (let [key, value] of Object.entries(obj1)) {
+            document.write(key + ":" + value + "<br>");
+        }
+    </script>
+</body>
+
+</html>

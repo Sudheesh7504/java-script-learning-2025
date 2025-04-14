@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <ttitle>for..in.loop</ttitle>
+</head>
+
+<body>
+    <h1>for..in loop gives the indices of the array/string/objects</h1>
+    <script>
+        //arrays
+        let arr = [1, 2, 4, 5];
+        for (let i in arr) {
+            document.write(i + " : " + arr[i] + "<br>");
+        }
+        document.write("<br>")
+        //strings
+        let str1 = "sudeesh";
+        for (let i in str1) {
+            document.write(i + " : " + str1[i] + "<br>");
+        }
+        document.write("<br>")
+        //objects
+        let obj1 = { "id": "1", "name": "sudeesh", "age": "23" };
+        for (let key in obj1) {
+            document.write(key + " : " + obj1[key] + "<br>");
+        }
+    </script>
+</body>
+
+</html>
