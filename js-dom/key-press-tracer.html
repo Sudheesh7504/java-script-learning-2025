@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>
+        8. Key Press Tracker
+    </title>
+</head>
+
+<body>
+    <input type="text" id="keyboardInput" onkeypress="onKeyEnter(event)">
+    <p id="keyOutput"></p>
+
+    <script>
+
+        function onKeyEnter(e) {
+            let key = document.getElementById("keyboardInput")
+            let ptag = document.getElementById("keyOutput")
+            if (key.value.length) {
+                return ptag.innerText = `You pressed: ${key.value}`
+            }
+            else {
+                return;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

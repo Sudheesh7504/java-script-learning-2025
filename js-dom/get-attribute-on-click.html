@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>
+        10. Read and Show Custom Attribute
+    </title>
+</head>
+
+<body>
+    <div id="customInfo" data-user="dev123"></div>
+    <button id="readBtn" onclick="getAttributeName()">Read User Info</button>
+    <p id="result"></p>
+
+    <script>
+        let divtag = document.getElementById('customInfo');
+        let ptag = document.getElementById("result")
+        function getAttributeName() {
+            let divattribute = divtag.getAttribute('data-user');
+            ptag.innerText = `user:${divattribute}`;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>3. Add List Item on Button Click</title>
+</head>
+
+<body>
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    <button id="addBtn" onclick="addlistItem()">Add Mango</button>
+    <script>
+        function addlistItem() {
+            let items = document.getElementsByTagName("li");
+            for (let i of items) {
+                if (i.innerText === "Mango") {
+                    return alert(`${i.innerText} is already added`)
+                }
+            }
+            let parentItem = document.getElementById("fruits");
+            let newItem = document.createElement('li');
+            newItem.innerText = 'Mango';
+
+            parentItem.appendChild(newItem)
+
+        }
+    </script>
+</body>
+
+</html>

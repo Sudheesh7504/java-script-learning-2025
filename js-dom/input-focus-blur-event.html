@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>
+        7. Input Focus and Blur
+    </title>
+</head>
+
+<body>
+    <input type="text" id="nameInput" placeholder="Type name" onfocus="onFocus()" onblur="onBlur()">
+    <script>
+        var inputElement = document.getElementById('nameInput')
+        function onFocus() {
+            inputElement.style.border = "2px solid lightgreen";
+        }
+
+        function onBlur() {
+            inputElement.style.border = "2px solid red";
+        }
+
+    </script>
+</body>
+
+</html>

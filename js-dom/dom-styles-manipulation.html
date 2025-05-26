@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>dom styles manipulation</title>
+</head>
+
+<body>
+    <!-- 1.Highlight All p Tags
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <script>
+        let ptags = document.querySelectorAll("p");
+        let hightlightTags = [...ptags].forEach((e) => {
+            e.style.backgroundColor = 'lightyellow';
+            e.style.color = 'darkblue';
+        })
+        console.log(hightlightTags);
+    </script> -->
+
+    <!-- 2. Update Image src and alt
+    <img id="main-image" src="old.jpg" alt="Old Image">
+    <script>
+        let image = document.getElementById("main-image");
+        image.setAttribute('src', 'new.jpg')
+        image.setAttribute('alt', 'New Image')
+    </script> -->
+
+    <!-- 3. Add Multiple Classes to a div
+    <div id="myDiv">Hello World</div>
+    <script>
+        let divTag = document.querySelector("#myDiv");
+        divTag.classList.add('box', 'highlight');
+        console.log(divTag.getAttribute('class'))
+    </script> -->
+
+    <!-- 4. Check and Read a Custom Attribute
+    <div id="info" data-role="admin"></div>
+    <script>
+        let getCustomAttr = document.getElementById("info");
+        console.log(getCustomAttr.getAttribute("data-role"));
+    </script> -->
+
+    5. Remove a Class
+    <div id="alert" class="box warning highlight">This is a warning box.</div>
+    <script>
+        let removeClass = document.getElementById("alert");
+        console.log("before", removeClass.getAttribute("class"))
+        removeClass.classList.remove("warning")
+        console.log("after", removeClass.getAttribute("class"))
+    </script>
+</body>
+
+</html>

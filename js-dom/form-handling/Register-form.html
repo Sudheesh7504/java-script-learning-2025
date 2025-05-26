@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Register form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Register-form.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="header" id="header">
+            <h2>Register Form</h2>
+        </div>
+        <form action="Register-success.html" class="form" id="form">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" placeholder="xyz123" id="uname">
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error messsage</small>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" placeholder="sudeesh123@gmail.com" id="email">
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error messsage</small>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" placeholder="*****" id="password">
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error messsage</small>
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="*****" id="cpassword">
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error messsage</small>
+            </div>
+            <div class="field">
+                <input type="checkbox" class="terms" id="tandc">
+                <label>Accept Terms and Conditions</label>
+                <span class="material-icons success">check_circle</span>
+                <span class="material-icons error">error</span>
+                <small>Error messsage</small>
+            </div>
+            <input type="submit" class="button">
+        </form>
+    </div>
+    <script src="Register-form.js"></script>
+</body>
+
+</html>

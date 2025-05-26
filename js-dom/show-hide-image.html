@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        2. Show/Hide Image
+    </title>
+</head>
+<img id="toggleImage" src="photo.jpg" width="200">
+<br>
+<button id="toggleBtn" onclick="toggleImage()">Hide Image</button>
+<script>
+    let image = document.getElementById("toggleImage");
+    let btn = document.getElementById("toggleBtn");
+    function toggleImage() {
+        if (image.style.display === "none") {
+            image.style.display = "block";
+            btn.innerText = "Hide Image";
+            image.alt = "image showing";
+        } else {
+            image.style.display = "none";
+            btn.innerText = "show Image";
+            image.alt = "image hidden";
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>5.Form Submit Alert</title>
+</head>
+
+<body>
+    <form id="loginForm" onsubmit="submitForm(event)">
+        <input type="text" id="username" placeholder="Enter username">
+        <button type="submit">Login</button>
+    </form>
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+
+            const inputTag = document.getElementById("username");
+            const username = inputTag.value.trim();
+
+            if (username) {
+                alert(`Hello, ${username}`);
+            } else {
+                alert("Please enter a username.");
+            }
+        }
+    </script>
+</body>
+
+</html>

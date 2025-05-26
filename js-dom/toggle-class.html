@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>1.Toggle Paragraph Color on Button Click</title>
+    <style>
+        .toggle-color {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="text">Click the button to change my color.</p>
+    <button id="colorBtn" onclick="toggleColor()">Change Color</button>
+    <script>
+        function toggleColor() {
+            let textElement = document.getElementById('text');
+            textElement.classList.toggle('toggle-color')
+        }
+    </script>
+</body>
+
+</html>

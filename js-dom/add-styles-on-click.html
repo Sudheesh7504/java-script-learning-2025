@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>
+        9. Add Multiple Styles on Click
+    </title>
+</head>
+
+<body>
+    <div id="styleBox">Click me to style</div>
+
+    <script>
+        let divtag = document.getElementById('styleBox');
+        divtag.addEventListener('click', function () {
+            divtag.classList.add('box', 'highlight')
+            console.log(divtag.getAttribute('class'))
+        })
+    </script>
+</body>
+
+</html>

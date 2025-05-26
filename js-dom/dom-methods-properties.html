@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <ttitle>java script dom</ttitle>
+</head>
+
+<body>
+    <!-- // 1.Change Text Using getElementById
+    <h1 id="main-heading">Welcome</h1>
+    <script>
+        let textChange = document.getElementById("main-heading").innerText = "Welcome to JavaScript DOM!";
+        console.log(textChange);
+    </script> -->
+
+    <!-- //2. Change Background Color of Multiple Elements
+    <div class="color-box">Box 1</div>
+    <div class="color-box">Box 2</div>
+    <script>
+        let bgColorChange = document.getElementsByClassName("color-box");
+        let result = [...bgColorChange].forEach(el => {
+            el.style.backgroundColor = "yellow";
+        });
+        console.log(result)
+    </script> -->
+
+    <!-- //3.Add New Paragraph Below a Div
+    <div id="content">This is content section.</div>
+    <script>
+        let newPara = document.createElement("p");
+        newPara.innerHTML = "This is added via JS";
+        let contentDiv = document.getElementById("content");
+        contentDiv.parentNode.insertBefore(newPara, contentDiv.nextSibling);
+    </script> -->
+
+    <!-- //4.Change the First Button Text
+    <button>Click Me</button>
+    <button>Submit</button>
+    <script>
+        let firstbtnTextChange = document.querySelector("button").innerText = "Clicked";
+        console.log(firstbtnTextChange);
+    </script> -->
+
+    //5.Count Number of Paragraphs on Page
+    <p>Para 1</p>
+    <p>Para 2</p>
+    <p>Para 3</p>
+    <script>
+        let tagsCount = document.getElementsByTagName("p");
+        let length = [...tagsCount].length;
+        console.log(length)
+    </script>
+</body>
+
+</html>

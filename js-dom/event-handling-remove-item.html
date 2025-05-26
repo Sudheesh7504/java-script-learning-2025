@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title> 4. Remove Last Item from List</title>
+</head>
+
+<body>
+    <ul id="tasks">
+        <li>Task 1</li>
+        <li>Task 2</li>
+    </ul>
+    <button id="removeBtn" onclick="removeItem()">Remove Last Task</button>
+
+    <script>
+        function removeItem() {
+            let items = document.getElementsByTagName("li");
+
+            let parentItem = document.getElementById("tasks");
+
+            if (items.length > 0) {
+                parentItem.removeChild(items[items.length - 1]);
+            } else {
+                alert("No more tasks to remove!");
+            }
+        }
+    </script>
+</body>
+
+</html>

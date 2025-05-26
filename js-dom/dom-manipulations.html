@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>dom manipulations</title>
+    <!-- You now know how to:
+    
+    Create elements: document.createElement('tag')
+    
+    Set content: element.innerText or element.innerHTML
+    
+    Append: parent.appendChild(child)
+    
+    Insert before: parent.insertBefore(newNode, referenceNode)
+    
+    Remove: parent.removeChild(child) or element.remove()
+    
+    Replace: element.replaceWith(newElement) or parent.replaceChild(new, old)
+    
+    Clear all children: element.replaceChildren() (modern way) -->
+</head>
+
+<body>
+    <!-- //1.Create and Add a New List Item
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    <script>
+        let parent = document.getElementById("fruits");
+        let newItem = document.createElement('li');
+        newItem.innerText = 'Mango';
+        parent.appendChild(newItem); 
+        </script>-->
+
+    <!-- //2.Replace a Paragraph with a Heading
+    <div id="content">
+        <p>This is a paragraph</p>
+    </div>
+    <script>
+        let paraTag = document.getElementById("content");
+        let headingTag = document.createElement('h2');
+        headingTag.innerText = 'This is a heading';
+        //paraTag.replaceWith(headingTag);
+        paraTag.replaceChildren(headingTag);
+        paraTag.replaceChild(paraTag,HeadinTag);
+        let paragraph = paraTag.querySelector("p");
+        paraTag.replaceChild(headingTag, paragraph);
+    </script> -->
+
+    //3.Remove an Element
+    <div id="box">
+        <p id="remove">Remove me</p>
+    </div>
+    <script>
+        let parent = document.getElementById("box");
+        let child = document.getElementById("remove");
+        parent.removeChild(child)
+    </script>
+</body>
+
+</html>
