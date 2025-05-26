@@ -15,7 +15,7 @@ uname.addEventListener('keyup', checkUsername);
 email.addEventListener('keyup', checkEmail);
 password.addEventListener('keyup', passwordCheck);
 cpassword.addEventListener('keyup', confirmPasswordCheck);
-tandCCheck.addEventListener('change', tandCCheck);
+tandc.addEventListener('change', tandCCheck);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
