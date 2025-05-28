@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Higher order functions</title>
+</head>
+
+<body>
+    <p>Higher order functions: passing function as a argument to other function and calling inside that function or
+        return function inside other function</p>
+    <script>
+        //passing function as a argument to other function and calling inside that function
+        function first(s) {
+            s();
+        }
+        function second() {
+            console.log("this is second function")
+        }
+        first(second)
+
+        //return function inside other function
+        function first1() {
+            return second;
+        }
+
+        function second1() {
+            console.log("this is second function")
+        }
+        first1()();
+
+        //realworld-example
+        var arr = [2, 4, 5, 8, 10, 34];
+
+        function square(num) {
+            return num * num;
+        }
+
+        function cube(num) {
+            return num * num * num;
+        }
+
+        function performOperation(arr, operation) {
+            let result = [];
+            for (let ele of arr) {
+                let res = operation(ele);
+                result.push(res);
+            }
+            return result;
+        }
+
+        let x = performOperation(arr, square)
+        console.log(x)
+        let y = performOperation(arr, cube)
+        console.log(y)
+    </script>
+</body>
+
+</html>

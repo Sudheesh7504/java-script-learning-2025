@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>call back functions</title>
+</head>
+
+<body>
+    <p>call back functions: passing function as a argument to another function and calling inside that function</p>
+    <script>
+        //example-1
+        function first(s) {
+            s();
+            console.log("this is first function");
+        }
+
+        function second() {
+            console.log("this is second function");
+        }
+
+        first(second);
+
+        //example-2
+
+        function add(val1, val2) {
+            console.log(val1 + val2)
+        }
+
+        function product(val1, val2) {
+            console.log(val1 * val2)
+        }
+
+        function calculator(val1, val2, operator) {
+            operator(val1, val2)
+        }
+
+        calculator(2, 3, add)
+        calculator(2, 3, product)
+
+        //example-3
+        function orderPizza(callback) {
+            console.log("Pizza ordered...");
+            callback(); // call back when done
+        }
+
+        function eatPizza() {
+            console.log("Eating pizza 🍕");
+        }
+
+        orderPizza(eatPizza);
+
+        //example-4
+        //Write a function doHomework(subject, callback) and print:
+        // Starting homework for Math
+        //Homework done!
+
+        function doHomework(subject, callback) {
+            console.log("starting homework for", subject)
+            callback();
+        }
+
+        function homeworkDone() {
+            console.log("Homework done!");
+        }
+
+        doHomework("Math", homeworkDone)
+    </script>
+</body>
+
+</html>
