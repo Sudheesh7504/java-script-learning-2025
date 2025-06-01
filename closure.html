@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>closure</title>
+</head>
+
+<body>
+    <!-- <p>closure: closuring is nothing but scope of the variable</p>
+    <script>
+        //basic-example
+        function outer() {
+            let x = 10;
+            function inner() {
+                console.log(x);
+            }
+            return inner;
+        }
+        let fun = outer();
+        fun()
+    </script> -->
+
+    <button id="btn" onclick="updateCount()">click</button>
+    <p id="count-text">count:0</p>
+</body>
+<script>
+    //counter example
+    function updateCounter() {
+        let count = 0;
+        function inner() {
+            count += 1;
+            let countText = document.getElementById("count-text");
+            countText.innerText = `count: ${count}`;
+        }
+        return inner;
+    }
+    let updateCount = updateCounter();
+
+</script>
+
+</html>
