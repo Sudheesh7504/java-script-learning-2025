@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <titke>this keyword</titke>
+</head>
+
+<body>
+    <!-- <p>value of this keword ouside function/object it always refers window object</p>
+    <script>
+        x = 10;
+        console.log(this.x);
+    </script> -->
+
+    <!-- <p>value of this keword inside regular function it always refers window object</p>
+    <script>
+        var a = 20;
+        function f1() {
+            console.log(this.a)
+            console.log(window.a)
+        }
+        f1()
+    </script> -->
+
+    <!-- <p>value of this keword inside method it always refers to that specified object</p>
+    <script>
+        var movie = {
+            name: 'RRR',
+            getName: function () {
+                console.log(this);
+            }
+        }
+        movie.getName()
+         </script>
+     -->
+
+    <!-- <p>value of this keyword inside event handler always refers to specifc element</p>
+    <input type="button" id="btn" value="click">
+    <script>
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            console.log(this)
+        })
+    </script> -->
+
+    <!-- <p>value of this keyword inside strict mode in global scope refers to window object</p>
+    <script>
+        "use strict";
+        console.log(this);
+    </script> -->
+
+    <p>value of this keyword inside strict mode in function scope refers to undefined</p>
+    <script>
+        "use strict";
+        function f1() {
+            console.log(this)
+        }
+        f1()
+    </script>
+</body>
+
+</html>
