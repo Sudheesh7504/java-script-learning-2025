@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>call,apply and bind</title>
+</head>
+
+<body>
+    <!-- <p>call accepts first parameter is object then it will accept infinite parameters seperated by comma</p>
+    <script>
+        var salary = 1000;
+        function getSalary(a, b) {
+            console.log(this.salary);
+            console.log(a, b);
+        }
+
+        employee1 = {
+            salary: 2000
+        };
+
+        employee2 = {
+            salary: 3000
+        };
+
+
+        getSalary.call(employee1, 10, 20);
+        getSalary.call(employee2, 10, 20);
+    </script> -->
+
+    <!-- <p>apply also works same like call accepts first parameter is object then but it will accept infinite parameters
+        inside array</p>
+    <script>
+        var salary = 1000;
+        function getSalary(a, b) {
+            console.log(this.salary);
+            console.log(a, b);
+        }
+
+        employee1 = {
+            salary: 2000
+        };
+
+        employee2 = {
+            salary: 3000
+        };
+
+
+        getSalary.apply(employee1, [10, 20]);
+        getSalary.apply(employee2, [10, 20]);
+    </script> -->
+
+    <!-- <p>bind also works like call accepts first parameter is object then it will accept infinite parameters seperated by
+        comma but it returns function</p>
+    <script>
+        var salary = 1000;
+        function getSalary(a, b) {
+            console.log(this.salary);
+            console.log(a, b);
+        }
+
+        employee1 = {
+            salary: 2000
+        };
+
+        employee2 = {
+            salary: 3000
+        };
+
+
+        var emp1Salary = getSalary.bind(employee1);
+        emp1Salary(10, 20);
+        var emp2Salary = getSalary.bind(employee2);
+        emp2Salary(10, 20)
+    </script> -->
+
+    <script>
+        var myObject = {
+            salary: 4000,
+            getSalary: function (a, b) {
+                console.log(this.salary);
+                console.log(a, b);
+            }
+        }
+
+        myObject.getSalary.call(myObject, 10, 20);
+        myObject.getSalary.apply(myObject, [10, 20]);
+        var mySalary = myObject.getSalary.bind(myObject);
+        mySalary(10, 20)
+    </script>
+</body>
+
+</html>
