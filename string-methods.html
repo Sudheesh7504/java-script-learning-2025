@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>java script string methods</title>
+</head>
+
+<body>
+    <p>1.chatAt: it will take index as argument and gives the character at the passed index</p>
+    <p>2.indexOf: it will accept charcter as arugument and gives the first index of the specific character that we
+        passed</p>
+    <p>3.lastIndexOf: it will accept charcter as arugument and gives the last index of the specific character that we
+        passed</p>
+    <p>4.concat: it will concatenate 2 or more strings into one </p>
+    <p>5.length : it will give length of the string</p>
+    <p>6.toUpperCase: it will convert all characters in string into uppercase</p>
+    <p>7.toLowerrCase: it will convert all characters in string into lowercase</p>
+    <p>8.trim: it will remove the trailing spaces from starting of the string</p>
+    <p>9.split: it will each charcater into array with spaces it can split or without spaces also it can split and it
+        will accept one optional parameter if we pass that character it will split based on that character</p>
+    <p>10.starts with: it can filter the string with charater of string that we given check from starting and it will
+        return boolean value</p>
+    <p>11.ends with: it can filter the string with charater of string that we given check from ending and it will
+        return boolean value</p>
+    <p>12.slice: it will give the piece of string that from starting index and excludes ending index it will support
+        negative indexing as well</p>
+    <p>13.substring: it will give the piece of string that from starting index and excludes ending index it won't
+        support negative indexing</p>
+    <p>14.substr: it will accept 2 paramters and one is start index and otherone is count from start index it will give
+        the slice of the string based on the length we passed from start index</p>
+    <p>15.includes: it will check the string exist or not and it will return boolean value</p>
+    <p>16.charCodeAt: it will give the ascii value of the index of the character the we pass</p>
+    <p>17.repeat: it will repeat the string into n times that we given in the method</p>
+    <P>18.replace: it will replace the string with the new string or character we given at the first occurence.</P>
+    <script>
+        //1.chatAt
+        let charAt = "sudeesh";
+        console.log(charAt.charAt(5))
+
+        //2.indexOf
+        let indexOf = "sudeesh";
+        console.log(indexOf.indexOf('e'))
+
+        //3.lastIndexOf
+        let lastIndex = "sudeesh";
+        console.log(lastIndex.lastIndexOf('e'))
+
+        //4.concat
+        let conc1 = "sudeesh";
+        let conc2 = "kumar";
+        let conc3 = "kurupati";
+        console.log(conc1.concat(conc2, conc3))
+
+        //5.length
+        let len = "sudeesh";
+        console.log(len.length)
+
+        //6.toUpperCase
+        let upper = "sudeesh";
+        console.log(upper.toUpperCase())
+
+        //7.toLowerCase
+        let lower = "SUDEESH";
+        console.log(upper.toLowerCase())
+
+        //8.trim
+        let trim = "       Sudeesh   ";
+        console.log(trim.trim())
+
+        //9.split
+        let split = "sudeesh is good boy";
+        console.log(split.split())//all string into array
+        console.log(split.split(''))//all characters into array
+        console.log(split.split(' '))//seperated with spaces into array
+        console.log(split.split('s'))//sepearted with character
+
+        //10.startswith
+        let startswith = "java script"
+        console.log(startswith.startsWith("j"))
+
+        //11.endsswith
+        let endswith = "java script"
+        console.log(endswith.endsWith("pt"))
+
+        //12.slice
+        let slice = "java script"
+        console.log(slice.slice(2, 7))
+        console.log(slice.slice(-7, -2))
+
+        //13.substring
+        let substring = "java script";
+        console.log(substring.substring(1, 2))
+
+        //14.substr
+        let substr = "java script";
+        console.log(substr.substr(2, 5))
+
+        //15.includes
+        let includes = "java script";
+        console.log(includes.includes("scrip"))
+
+        //16.charCodeAt
+        let charcodeat = "abc";
+        console.log(charcodeat.charCodeAt(0))
+
+        //17.repeat
+        let repeat = "sudeesh";
+        console.log(repeat.repeat(2))
+
+        //18.replace
+        let replace = "sudeesh";
+        console.log(replace.replace('s', 'p'))
+
+        //if we want to replace in all places we need to use regular expression that will replace global
+        console.log(replace.replace(/s/g, 'p'))
+
+    </script>
+</body>
+
+</html>
