@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>fetchmethod in java script</title>
+</head>
+
+<body>
+    <script>
+        //example using realtime url
+        let p = fetch("https://restcountries.com/v3.1/name/india")
+        p.then(function (response) {
+            response.json().then(function (countryInfo) {
+                console.log(countryInfo)
+            })
+        })
+
+        p.catch(function (error) {
+            console.log(error)
+        })
+
+        //example using txt file
+        let p2 = fetch("test.txt")
+        p2.then(function (response) {
+            response.text().then(function (countryInfo) {
+                console.log(countryInfo)
+            })
+        })
+
+        p2.catch(function (error) {
+            console.log(error)
+        })
+
+    </script>
+</body>
+
+</html>

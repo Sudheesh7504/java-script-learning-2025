@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Ajax response from json file</title>
+</head>
+
+<body>
+    <button id="request-btn">GET Request</button>
+    <div id="response"></div>
+    <script>
+        let btnElement = document.getElementById('request-btn');
+        let responseDiv = document.getElementById('response');
+
+        btnElement.addEventListener('click', loadResponse);
+
+        function loadResponse() {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'countries.json', true);
+            xhr.send();
+
+            xhr.onprogress = function () {
+                responseDiv.innerText = 'Loading...';
+            }
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const result = JSON.parse(xhr.responseText);
+                    let str = `<table border="1"><tr><th>Name</th><th>ISO2</th><th>ISO3</th><th>Dial Code</th></tr>`;
+
+                    result.forEach(country => {
+                        str += `<tr>
+                                    <td>${country.name}</td>
+                                    <td>${country.iso2}</td>
+                                    <td>${country.iso3}</td>
+                                    <td>${country.dialCode}</td>
+                                </tr>`;
+                    });
+
+                    str += `</table>`;
+                    responseDiv.innerHTML = str;
+                } else {
+                    responseDiv.innerText = 'Request failed';
+                }
+            };
+        }
+    </script>
+</body>
+
+</html>

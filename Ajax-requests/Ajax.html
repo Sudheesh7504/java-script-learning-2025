@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Ajax- Asynchronous java script and Xml</title>
+</head>
+
+<body>
+    <button id="btn">Send</button>
+    <div id="request-get"></div>
+    <script>
+        let btnElement = document.getElementById('btn');
+        let dataElement = document.getElementById('request-get');
+
+        btnElement.addEventListener('click', request)
+
+        function request() {
+            let xhr = new XMLHttpRequest();
+
+            //create method
+            xhr.open('GET', "test.txt", true);
+
+            //send request
+            xhr.send();
+
+            xhr.onprogress = function () {
+                dataElement.innerText = 'Loading.....'
+            }
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    dataElement.innerText = xhr.responseText;
+                } else {
+                    dataElement.innerText = 'Error loading data.';
+                }
+            }
+
+            // Handle network errors
+            xhr.onerror = function () {
+                dataElement.innerText = 'Request failed.';
+            }
+
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

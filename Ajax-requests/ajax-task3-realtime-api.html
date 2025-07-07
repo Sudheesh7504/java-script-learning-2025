@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>AJAX task-3 realtime api</title>
+</head>
+
+<body>
+    <input type="text" id="inp-id">
+    <br>
+    <button id="btn-ele">Get</button>
+    <br>
+    <br>
+    <div id="img-div"></div>
+    <script>
+        let inputEle = document.getElementById('inp-id');
+        let btnElement = document.getElementById('btn-ele');
+        let imgTag = document.getElementById('img-div');
+
+        btnElement.addEventListener('click', loadCountry);
+
+        function loadCountry() {
+            let url = `https://restcountries.com/v3.1/name/${inputEle.value}`;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.send();
+
+            xhr.onprogress = function () {
+                imgTag.innerText = 'Loading....';
+            }
+
+            if (inputEle.value) {
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        let result = xhr.responseText;
+                        result = JSON.parse(result);
+                        let [country] = result;
+                        imgTag.innerHTML = `<img src=${country.flags.png}>`
+                    } else {
+                        imgTag.innerText = 'request failed to send';
+                    }
+                }
+            } else {
+                imgTag.innerText = 'please enter some country name'
+            }
+        }
+    </script>
+</body>
+
+</html>

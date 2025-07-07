@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Afghanistan",
+        "iso2": "AF",
+        "iso3": "AFG",
+        "dialCode": "+93"
+    },
+    {
+        "name": "Albania",
+        "iso2": "AL",
+        "iso3": "ALB",
+        "dialCode": "+355"
+    },
+    {
+        "name": "Algeria",
+        "iso2": "DZ",
+        "iso3": "DZA",
+        "dialCode": "+213"
+    },
+    {
+        "name": "India",
+        "iso2": "IN",
+        "iso3": "IND",
+        "dialCode": "+91"
+    },
+    {
+        "name": "United States",
+        "iso2": "US",
+        "iso3": "USA",
+        "dialCode": "+1"
+    },
+    {
+        "name": "United Kingdom",
+        "iso2": "GB",
+        "iso3": "GBR",
+        "dialCode": "+44"
+    },
+    {
+        "name": "Australia",
+        "iso2": "AU",
+        "iso3": "AUS",
+        "dialCode": "+61"
+    },
+    {
+        "name": "Canada",
+        "iso2": "CA",
+        "iso3": "CAN",
+        "dialCode": "+1"
+    }
+]

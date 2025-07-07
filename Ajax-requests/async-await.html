@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>async-await in java script</title>
+</head>
+
+<body>
+    <script>
+        async function test() {
+            console.log("inside run");
+            let res = await fetch("test.txt")
+            console.log("inside run stmt2");
+            let finalRes = await res.text();
+            console.log(finalRes);
+        }
+        test()
+        console.log("outside run")
+    </script>
+</body>
+
+</html>
