@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>promise in js</title>
+</head>
+
+<body>
+    <script>
+        //basic promise
+        let p1 = new Promise(function (resolve, reject) {
+            let dataCame = true;
+            if (dataCame) {
+                resolve("promise done");
+            } else {
+                reject("promise not done")
+            }
+        });
+        console.log(p1)
+
+        //example-2
+        let p2 = new Promise(function (resolve, reject) {
+            let datacame = true;
+            if (datacame) {
+                resolve([1, 2, 4, 5]);
+            } else {
+                reject("error in promise");
+            }
+        })
+
+        p2.then(function (data) {
+            console.log(data);
+        })
+
+        p2.catch(function (error) {
+            console.log(error);
+        })
+    </script>
+</body>
+
+</html>
