@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bracket Notations Example</title>
+</head>
+
+<body>
+    <script>
+        // [a89] — Matches 'a', '8', or '9'
+        const regex1 = /[a89]/g;
+        console.log("1. [a89]:", "ball 89".match(regex1)); // ['a', '8', '9']
+
+        // [^a89] — Matches anything except 'a', '8', or '9'
+        const regex2 = /[^a89]/g;
+        console.log("2. [^a89]:", "a89XYZ".match(regex2)); // ['X', 'Y', 'Z']
+
+        // [0-9] — Matches any digit
+        const regex3 = /[0-9]/g;
+        console.log("3. [0-9]:", "a1b2c3".match(regex3)); // ['1', '2', '3']
+
+        // [a-z] — Matches lowercase letters
+        const regex4 = /[a-z]/g;
+        console.log("4. [a-z]:", "ABCdef123".match(regex4)); // ['d', 'e', 'f']
+
+        // [A-Z] — Matches uppercase letters
+        const regex5 = /[A-Z]/g;
+        console.log("5. [A-Z]:", "ABCdef123".match(regex5)); // ['A', 'B', 'C']
+
+        // [a-Z] — This is invalid: 'Z' comes before 'a' in Unicode.
+        // Only safe if character codes are known.
+        const regex6 = /[a-Z]/g;
+        console.log("6. [a-Z]:", "ABCdef123".match(regex6)); // Matches unexpected range, not reliable!
+    </script>
+</body>
+
+</html>

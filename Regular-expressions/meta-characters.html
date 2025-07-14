@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meta Characters using test()</title>
+</head>
+
+<body>
+    <script>
+        const str1 = "Hello123 _+.*?\n";
+
+        // . -> any character (except newline)
+        console.log("1. dot (.) present?", /./.test("abc")); // true
+
+        // \d -> at least one digit
+        console.log("2. \\d digit present?", /\d/.test("abc123")); // true
+
+        // \D -> at least one non-digit
+        console.log("3. \\D non-digit present?", /\D/.test("123")); // false if only digits
+
+        // \w -> any word character [0-9a-zA-Z_]
+        console.log("4. \\w word character present?", /\w/.test("!@#_")); // true (underscore)
+
+        // \W -> any non-word character
+        console.log("5. \\W non-word character present?", /\W/.test("abc$")); // true (symbol $)
+
+        // \s -> any whitespace (space, tab, newline)
+        console.log("6. \\s whitespace present?", /\s/.test("Hi there")); // true (space)
+
+        // \n -> specifically newline
+        console.log("7. \\n newline present?", /\n/.test("Line1\nLine2")); // true
+
+        // \. -> check for literal dot
+        console.log("8. \\. dot present?", /\./.test("version 1.0")); // true
+
+        // \+ -> plus sign
+        console.log("9. \\+ plus sign present?", /\+/.test("2+2=4")); // true
+
+        // \? -> question mark
+        console.log("10. \\? question mark present?", /\?/.test("What?")); // true
+
+        // \* -> asterisk symbol
+        console.log("11. \\* asterisk present?", /\*/.test("5*5")); // true
+
+        // /g -> is a flag used with RegExp, not a pattern. It's not testable directly like others.
+        // But we can use it while constructing RegExp for performance:
+        const globalCheck = new RegExp("test", "g");
+        console.log("12. 'test' globally present?", globalCheck.test("test test test")); // true
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>quantifiers</title>
+</head>
+
+<body>
+    <script>
+
+        // * — match zero or more 'b's
+        let re1 = /b*/;
+        console.log(re1.test("bm"));  // ✅ true — 'b' found at start
+        console.log(re1.test("apple"));  // ✅ true — because zero 'b' is still valid (zero or more)
+
+        // + — match one or more 'j's
+        let re2 = /j+/;
+        console.log(re2.test("jjj"));  // ✅ true
+        console.log(re2.test("hello"));  // ❌ false — no 'j'
+
+        // ? — match zero or one 'p'
+        let re3 = /p?/;
+        console.log(re3.test("apple")); // ✅ true — first char is 'a', so zero 'p' = valid
+
+        // {n} — exactly 2 'a's
+        let re4 = /a{2}/;
+        console.log(re4.test("caaat")); // ✅ true — 'aa' found
+
+        // {n,} — at least 2 'l's
+        let re5 = /l{2,}/;
+        console.log(re5.test("hello")); // ✅ true
+        console.log(re5.test("helo")); // ❌ false
+
+        // {n,m} — between 1 to 3 'o's
+        let re6 = /o{1,3}/;
+        console.log(re6.test("ooo")); // ✅ true
+        console.log(re6.test("oooooo")); // ✅ true — because it still contains at least 1–3 somewhere
+
+    </script>
+</body>
+
+</html>

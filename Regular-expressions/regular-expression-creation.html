@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Regular expression creation</title>
+</head>
+
+<body>
+    <script>
+        //using forward slashes
+        let re1 = /hello/i // /i is for case insensitive
+        let res = re1.test("Hello java script")
+        console.log(res)
+
+        //using constructor method
+        let x = 'hello';
+        let re2 = new RegExp(`${x}`);
+        let res2 = re2.test("Thellodd")
+        console.log(res2)
+
+        //test using test method
+        let ph = "^[0-9]{10}$";
+        let re3 = new RegExp(`${ph}`);
+        let res3 = re3.test(123456789)
+        console.log(res3)
+
+        //find multiple occurences using exec
+        let str1 = "hello";
+        let re4 = new RegExp(`${str1}`, "gi"); // g = global, i = case-insensitive
+
+        let input = "Hello java script hello python hello";
+
+        // Using exec in a loop to find multiple matches
+        let match;
+        while ((match = re4.exec(input)) !== null) {
+            console.log(`exec match: ${match[0]} at index ${match.index}`);
+        }
+
+        // Using match() to find all matches at once
+        let res5 = input.match(re4);
+        console.log("match() result:", res5);
+
+
+
+    </script>
+</body>
+
+</html>
