@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>strict mode</title>
+</head>
+
+<body>
+    <script>
+        // "use strict"
+        a = 10;
+        console.log(a);//if we use normally it won't throw any error but if we want to follow strict coding standards we need to use strict then it will throw undefined error
+
+        x = 10;
+        function strict() {
+            "use strict";
+            y = 20; // ❌ y not declared with let/var/const
+            console.log(x)
+            console.log(y);
+        }
+        strict();
+
+    </script>
+</body>
+
+</html>
