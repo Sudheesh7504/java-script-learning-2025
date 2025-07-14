@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>array destructuring</title>
+</head>
+
+<body>
+    <script>
+        //The destructuring assignment syntax unpack array(or) object properties into variables:
+        let arr1 = [10, 20, 30, 40, 60];
+        let [a, b, ...c] = arr1;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        //example:- swap variables in array
+        let firstName = "John";
+        let lastName = "Doe";
+        [firstName, lastName] = [lastName, firstName];
+        console.log(firstName, lastName);//Doe, John
+    </script>
+</body>
+
+</html>

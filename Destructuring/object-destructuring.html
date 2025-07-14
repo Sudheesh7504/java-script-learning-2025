@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>object destructuring</title>
+</head>
+
+<body>
+    <script>
+        //The destructuring assignment syntax unpack array(or) object properties into variables:
+        const userProfile = {
+            name: 'Sudheesh',
+            age: 28,
+            contact: {
+                email: 'sudheesh@example.com',
+                phone: '9876543210',
+                address: {
+                    city: 'Hyderabad',
+                    zip: '500081',
+                    geo: {
+                        lat: '17.385044',
+                        lng: '78.486671'
+                    }
+                }
+            },
+            skills: ['JavaScript', 'Angular', 'TypeScript'],
+            experience: {
+                frontend: {
+                    company: 'TechCorp',
+                    years: 2
+                },
+                backend: {
+                    company: 'DataSys',
+                    years: 1
+                }
+            }
+        };
+
+        const { name, contact: { address: { city, geo: { lat } } }, skills, experience: { frontend: { company } } } = userProfile;
+        console.log(name, city, lat, skills, company)
+
+    </script>
+</body>
+
+</html>
